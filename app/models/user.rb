@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   
   has_many :recipes, dependent: :destroy
-  has_many :favorites, dependent: :destory
+  has_many :favorites, dependent: :destroy
 end
