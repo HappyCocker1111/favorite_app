@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   #exceptで不要なルート設定を外す
   resource :user, except: [:new, :create, :destory]
-  resources :recipes
+  resources :recipes do
+    resource :favorites, only: [:create, :destroy]
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

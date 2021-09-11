@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
     def create
         #current_userに紐づいたいいねを作成
-        @favorite = current_user.favorites.create(recipe_id: paramas[:recipe_id])
+        @favorite = current_user.favorites.create(recipe_id: params[:recipe_id])
         redirect_back(fallback_location: root_path)
     end
 
